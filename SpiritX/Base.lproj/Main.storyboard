@@ -709,15 +709,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="578" height="325"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnP-gL-9V7">
-                                <rect key="frame" x="218" y="274" width="127" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Spirit X" id="pLv-bh-WAk">
-                                    <font key="font" size="42" name="Impact"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="xmy-eE-eUH">
                                 <rect key="frame" x="279" y="27" width="5" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -942,6 +933,17 @@
                                     <action selector="plantButton:" target="XfG-lQ-9wD" id="UYQ-h8-8EV"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fl-gx-gZh">
+                                <rect key="frame" x="241" y="213" width="13" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DhI-N9-MZt">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="moonButton:" target="XfG-lQ-9wD" id="ZD7-9G-I8W"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BWm-7W-VfF">
                                 <rect key="frame" x="241" y="153" width="13" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -982,8 +984,21 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAv-l4-231">
+                                <rect key="frame" x="492" y="306" width="82" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="© Galaxxy 2020" id="YpI-Ey-wr7">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" doubleValue="25" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="pUy-kH-UEF">
+                                <rect key="frame" x="298" y="39" width="260" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </progressIndicator>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmr-a9-2Qe">
-                                <rect key="frame" x="463" y="20" width="109" height="32"/>
+                                <rect key="frame" x="463" y="-1" width="109" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Next Phase" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="02v-Lo-UN4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -993,26 +1008,15 @@
                                     <action selector="phaseButton:" target="XfG-lQ-9wD" id="l9C-wB-0QB"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAv-l4-231">
-                                <rect key="frame" x="490" y="6" width="82" height="13"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnP-gL-9V7">
+                                <rect key="frame" x="208" y="266" width="147" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="© Galaxxy 2020" id="YpI-Ey-wr7">
-                                    <font key="font" metaFont="system" size="10"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Spirit X" id="pLv-bh-WAk">
+                                    <font key="font" size="49" name="Impact"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fl-gx-gZh">
-                                <rect key="frame" x="241" y="213" width="13" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DhI-N9-MZt">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="moonButton:" target="XfG-lQ-9wD" id="ZD7-9G-I8W"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -1024,6 +1028,7 @@
                         <outlet property="moonNumber" destination="dXX-jH-JfU" id="r9N-tb-ADN"/>
                         <outlet property="nextPhaseButton" destination="mmr-a9-2Qe" id="oYd-qh-3bA"/>
                         <outlet property="phase" destination="Hc5-cC-bbq" id="cYf-5N-MCT"/>
+                        <outlet property="phaseBar" destination="pUy-kH-UEF" id="LFk-2E-oLW"/>
                         <outlet property="phaseDesc" destination="oE3-DD-gRB" id="DBD-Bt-cPM"/>
                         <outlet property="plantNumber" destination="vRm-ZU-vJS" id="WSl-TF-mn8"/>
                         <outlet property="sunNumber" destination="J7R-QA-lCj" id="cMt-CI-LGK"/>

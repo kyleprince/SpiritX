@@ -54,21 +54,26 @@ class ViewController: NSViewController {
     // Phase Descriptions
     @IBOutlet weak var phase: NSTextField!
     @IBOutlet weak var phaseDesc: NSTextField!
+    @IBOutlet weak var phaseBar: NSProgressIndicator!
     @IBAction func phaseButton(_ sender: Any) {
         
         // Set phase title
         var nextPhase = ""
         if (phase.stringValue == "Spirit Phase") {
             nextPhase = "Fast Power Phase"
+            phaseBar.increment(by: 25)
         }
         else if (phase.stringValue == "Fast Power Phase") {
             nextPhase = "Invader Phase"
+            phaseBar.increment(by: 25)
         }
         else if (phase.stringValue == "Invader Phase") {
             nextPhase = "Slow Power Phase"
+            phaseBar.increment(by: 25)
         }
         else if (phase.stringValue == "Slow Power Phase") {
             nextPhase = "Spirit Phase"
+            phaseBar.increment(by: -75)
         }
         phase.stringValue = nextPhase
         
@@ -81,7 +86,7 @@ class ViewController: NSViewController {
             instructions = "Play Fast Power Cards and Fast Innate Powers"
         }
         else if (phase.stringValue == "Invader Phase") {
-            instructions = "1. Blighted Effects \n2. Fear Effects \n3. Ravage \n4. Build \n5. Explore"
+            instructions = "1. Blighted Effects \n2. Fear Effects \n3. Ravage \n4. Build \n5. Explore \n6. Advance Invader Cards"
         }
         else if (phase.stringValue == "Slow Power Phase") {
             instructions = "Play Slow Power Cards and Slow Innate Powers"
