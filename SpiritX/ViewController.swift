@@ -59,15 +59,15 @@ class ViewController: NSViewController {
         // Set phase title
         var nextPhase = ""
         if (phase.stringValue == "Spirit Phase") {
-            nextPhase = "Fast Power"
+            nextPhase = "Fast Power Phase"
         }
-        else if (phase.stringValue == "Fast Power") {
+        else if (phase.stringValue == "Fast Power Phase") {
             nextPhase = "Invader Phase"
         }
         else if (phase.stringValue == "Invader Phase") {
-            nextPhase = "Slow Power"
+            nextPhase = "Slow Power Phase"
         }
-        else if (phase.stringValue == "Slow Power") {
+        else if (phase.stringValue == "Slow Power Phase") {
             nextPhase = "Spirit Phase"
         }
         phase.stringValue = nextPhase
@@ -75,15 +75,15 @@ class ViewController: NSViewController {
         // Set phase description
         var instructions = ""
         if (phase.stringValue == "Spirit Phase") {
-            instructions = "Growth"
+            instructions = "Growth: \n1. Gain Energy \n2. Choose Growth Path"
         }
-        else if (phase.stringValue == "Fast Power") {
+        else if (phase.stringValue == "Fast Power Phase") {
             instructions = "Play Fast Power Cards and Fast Innate Powers"
         }
         else if (phase.stringValue == "Invader Phase") {
-            instructions = "1. Blighted Effects \n 2. Fear Effects \n 3. Ravage \n 4. Build \n 5. Explore"
+            instructions = "1. Blighted Effects \n2. Fear Effects \n3. Ravage \n4. Build \n5. Explore"
         }
-        else if (phase.stringValue == "Slow Power") {
+        else if (phase.stringValue == "Slow Power Phase") {
             instructions = "Play Slow Power Cards and Slow Innate Powers"
         }
         phaseDesc.stringValue = instructions
@@ -97,7 +97,9 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if (phase.stringValue == "Spirit Phase") {
+            phaseDesc.stringValue = "Growth: \n1. Gain Energy \n2. Choose Growth Path"
+        }
         // Do any additional setup after loading the view.
     }
 
